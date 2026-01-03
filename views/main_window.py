@@ -31,6 +31,9 @@ class MainWindow(QMainWindow):
         layout = QVBoxLayout()
         layout.addWidget(self.map_widget)
         self.ui.mapContainer.setLayout(layout)
+        self.resize(1024, 768)
+        self.setMinimumSize(640, 480)
+
 
     def _connect_signals(self):
         self.ui.loadButton.clicked.connect(self._load_map)
